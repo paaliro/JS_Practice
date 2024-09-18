@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Key Functionality</title>
+  </head>
+  <body>
+    <!-- Input field for text entry -->
+    <input type="text" id="myInput" placeholder="Type something..." />
+
+    <!-- Button to add the input to a list -->
+    <button id="addButton">Add to List</button>
+
+    <!-- List to display added items -->
+    <ul id="itemList"></ul>
+
+    <!-- JavaScript to handle the Enter key and button functionality -->
+    <script>
+      // Get references to the input field, button, and list
+      const inputField = document.getElementById("myInput");
+      const addButton = document.getElementById("addButton");
+      const itemList = document.getElementById("itemList");
+
+      // Function to add the input text to the list
+      function addItem() {
+        const inputValue = inputField.value.trim(); // Get the input field value and remove any extra whitespace
+        if (inputValue !== "") {
+          // Check if the input field is not empty
+          const listItem = document.createElement("li"); // Create a new list item element
+          listItem.textContent = inputValue; // Set the text of the new list item to the input field value
+          itemList.appendChild(listItem); // Append the new list item to the item list
+          inputField.value = ""; // Clear the input field for new entries
+        }
+      }
+
+      // Add a click event listener to the button to call the addItem function
+      addButton.addEventListener("click", addItem);
+
+      // Add a keydown event listener to the input field to detect the Enter key press
+      inputField.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          // Check if the pressed key is 'Enter'
+          event.preventDefault(); // Prevent the default form submission behavior
+          addButton.click(); // Simulate a click on the button
+        }
+      });
+    </script>
+  </body>
+</html>

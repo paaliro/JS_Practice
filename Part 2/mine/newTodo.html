@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <!-- CSS -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        place-items: center;
+        background: #797a9e;
+      }
+
+      h1 {
+        color: white;
+      }
+
+      #addTodo {
+        padding: 10px 20px;
+        background-color: #002a32; /* Blue background for the button */
+        color: white; /* White text color */
+        border: 2px solid white;
+        border-radius: 50px;
+        font-size: 12px;
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+      }
+
+      #addTodo:hover {
+        background-color: white; /* Background color changes to white on hover */
+        color: #002a32; /* Text color changes to dark (initial background color) on hover */
+        font-weight: bold;
+        border: 2px solid #002a32;
+        transition: background-color 0.3s ease;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        border: 2px solid #797a9e;
+        border-radius: 4px;
+        font-size: 12px;
+        /* width: 5%; Full-width input */
+        /* box-sizing: border-box; Includes padding and border in width */
+        /* transition: border-color 0.3s ease; */
+      }
+
+      main {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        .inputContainer {
+          display: flex;
+          gap: 10px;
+        }
+      }
+
+      .mainContainer {
+        width: 100%;
+      }
+
+      .listContainer {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- heading -->
+      <h1>Todo List</h1>
+      <div class="inputContainer">
+        <input
+          id="inputValue"
+          type="text"
+          placeholder="Add Something Here..."
+        />
+        <button id="addTodo">Add Todo</button>
+      </div>
+      <div class="mainContainer">
+        <ul class="listContainer">
+          <li>Work</li>
+          <button class="removeBtn" >Delete</button>
+        </ul>
+      </div>
+    </main>
+
+    <!-- js -->
+    <script>
+
+    </script>
+  </body>
+</html>

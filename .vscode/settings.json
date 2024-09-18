@@ -1,0 +1,10 @@
+{
+    "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}",
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "blink",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorSurroundingLines": 0,
+    "editor.cursorWidth": 0,
+    "editor.fontLigatures": false,
+    "diffEditor.hideUnchangedRegions.revealLineCount": 20
+}

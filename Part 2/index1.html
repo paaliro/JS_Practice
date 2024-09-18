@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Events</title>
+    <link rel="stylesheet" href="./style1.css" />
+  </head>
+  <body>
+    <main>
+      <!--start inline event-->
+      <h1>Inline Event</h1>
+      <div class="btnContainer">
+        <button onclick="alert('welcome')">Greeting</button>
+        <button ondblclick="alert('welcome')">Greeting Again</button>
+        <button onmouseover="alert('welcome')">Greeting</button>
+      </div>
+
+      <!--start dom event handler-->
+      <div class="btnContainer2">
+        <h1>Dom Event Handler</h1>
+        <button id="myBtn" onclick="alert('welcome')">Greeting</button>
+        <button id="mybtn1">Greeting Again</button>
+      </div>
+
+      <!--addEventListener handler-->
+      <div class="btnContainer3">
+        <h1>addEventListener Event Handler</h1>
+        <button id="myBtn5">Greeting</button>
+        <button id="mybtn1">Greeting Again</button>
+      </div>
+    </main>
+
+    <!-- link js -->
+    <script>
+      // Dom Event Handler
+      document.getElementById("myBtn").onclick = function () {
+        alert("welcome");
+      };
+
+      // addEventListener
+      document.getElementById("myBtn5")
+    </script>
+  </body> 
+</html>

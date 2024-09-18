@@ -1,0 +1,105 @@
+<!-- //* =================================== 22.08.2024 =================================== */ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      width: 100wh;
+      background-color: #141414;
+    }
+
+    main {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+
+    button {
+      border: 2px solid; /* Remove borders */
+      color: black; /* White text */
+      padding: 8px 20px; /* Some padding */
+      margin: 4px 2px; /* Some margin */
+      cursor: pointer; /* Pointer/hand icon */
+      border-radius: 15px; /* Rounded corners */
+      transition: background-color 0.4s, color 0.4s; /* Smooth transition */
+    }
+
+    .addBtn {
+      background-color: yellow;
+    }
+
+    .addBtn:hover {
+      background-color: #141414;
+      color: #ffff00;
+      box-shadow: 0 0 20px #ffff00, 0 0 40px #ffff00, 0 0 60px #ffff00; /* Button glow */
+    }
+
+    .getBtn {
+      background-color: #9acd32;
+    }
+
+    .getBtn:hover {
+      background-color: #141414;
+      color: yellowgreen;
+      box-shadow: 0 0 20px #9acd32, 0 0 40px #9acd32, 0 0 60px #9acd32; /* Button glow */
+    }
+
+    .delBtn {
+      background-color: #f0544f;
+    }
+
+    .delBtn:hover {
+      background-color: #141414;
+      color: #f0544f;
+      box-shadow: 0 0 20px #f0544f, 0 0 40px #f0544f, 0 0 60px #f0544f; /* Button glow */
+    }
+  </style>
+  <body>
+    <main>
+      <button class="addBtn">Add Data to localstorage</button>
+      <button class="getBtn">Get Data from localstorage</button>
+      <button class="delBtn">Delete Data from localstorage</button>
+    </main>
+
+    <script>
+      const studentData = {
+        firstName: "Parveen",
+        lastName: "Kumar",
+        age: 21,
+        gender: "male",
+        grade: "A",
+        courses: ["Math", "Science", "English"],
+        address: {
+          street: "123 Main St",
+          city: "Sultanpuri",
+          state: "New Delhi",
+          zipCode: 110086,
+        },
+      };
+
+  
+      // add data list
+      const addTodoList = () => {
+        localStorage.setItem("objectData", JSON.stringify(studentData));
+      };
+  
+      document.querySelector("addBtn").addEventListener("click", () => {
+        addTodoList();
+      });
+    </script>
+  </body>
+</html>

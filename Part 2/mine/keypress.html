@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enter Key Example</title>
+  </head>
+  <body>
+    <!-- Input field and a button -->
+    <input type="text" id="myInput" placeholder="Type something..." />
+    <button id="addButton">Add</button>
+    <ul id="list"></ul>
+
+    <!-- Include the JavaScript below -->
+    <script>
+      // Select the input, button, and list elements
+      const input = document.getElementById("myInput");
+      const button = document.getElementById("addButton");
+      const list = document.getElementById("list");
+
+      // Function to add the input value to the list
+      function addItem() {
+        const inputValue = input.value.trim(); // Get the input value and trim whitespace
+        if (inputValue) {
+          // Check if the input is not empty
+          const listItem = document.createElement("li"); // Create a new list item
+          listItem.textContent = inputValue; // Set the list item's text to the input value
+          list.appendChild(listItem); // Add the new list item to the list
+          input.value = ""; // Clear the input field
+        }
+      }
+
+      // Add an event listener to the button for click events
+      button.addEventListener("click", addItem);
+
+      // Add an event listener to the input field for keydown events
+      input.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          // Check if the Enter key was pressed
+          event.preventDefault(); // Prevent the default form submission
+          addItem(); // Call the addItem function
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.button {
+  background-color: #FFFFE0;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.rectangle {
+  background-color: yellow;
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+}
