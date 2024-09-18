@@ -23,7 +23,7 @@
 //     console.log(num)
 //     num++;
 // }
-
+//  test msg
 // **** DO-WHILE LOOP to count 1 tl 10.
 // var num = 1;
 // do {console.log(num)
