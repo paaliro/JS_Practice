@@ -128,3 +128,6 @@ const sum = (a, b, ...numbers) => {
   //TODO NOTE: A function definition can only have one rest parameter, and the rest parameter must be the last parameter in the function definition.
   // function wrong1(...one, ...wrong) {}
   // function wrong2(...wrong, arg2, arg3) {}
+
+
+console.log("HI.");
