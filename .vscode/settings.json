@@ -1,7 +1,7 @@
 {
     "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}${profileName}${separator}${appName}",
     "editor.cursorStyle": "line",
-    "editor.cursorBlinking": "blink",
+    "editor.cursorBlinking": "smooth",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.cursorSurroundingLines": 0,
     "editor.cursorWidth": 0,
