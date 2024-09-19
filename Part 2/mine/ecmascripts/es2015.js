@@ -113,9 +113,9 @@ console.log(newFruits);
 //? The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, providing a more flexible way to work with functions that can accept varying numbers of arguments.
 
 //? traditional way of doing it
-// const sum = (a, b, c, d) => {
-//   return a + b + c + d;
-// };
+const sum = (a, b, c, d) => {
+  return a + b + c + d;
+};
 
 //? with rest parameters
 const sum = (a, b, ...numbers) => {
