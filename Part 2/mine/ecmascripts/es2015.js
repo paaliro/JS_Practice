@@ -13,7 +13,7 @@
 //*  Object Properties - Modern JavaScript
 //* =========================================
 const name = "vinod";
-const age = 30;
+// const age = 30;
 
 //? traditional way
 // const person = { name: name, age: age };
