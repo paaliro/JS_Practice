@@ -1,5 +1,5 @@
 //* ==========================================
-//*    ECMAScript Features (2022) / ES13
+//*    ECMAScript Features (2022) / ES14
 //* =========================================
 
 //? List of new useful features added in ES8  👇
