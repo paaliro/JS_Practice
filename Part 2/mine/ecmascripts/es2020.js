@@ -8,9 +8,9 @@
 // iii. Optional Chaining Operator ?.
 // iv. promise.allSettled
 
-//* =============
+//* ================
 //* i. BigInt
-//* =============
+//* ================
 //? BigInt: BigInt in JavaScript is a data type used to represent and perform operations on large integers that exceed the limits of regular numbers.
 
 //? Creating BigInts:
@@ -41,7 +41,6 @@ console.log(num);
 //* iii. Optional Chaining Operator (?.)
 //* =====================================
 //? It provides a concise way to access properties of an object without worrying about the existence of intermediate properties. It's particularly useful when working with nested objects or accessing properties of objects that may be null or undefined.
-
 // const person = {
 //   name: "John",
 //   address: {
