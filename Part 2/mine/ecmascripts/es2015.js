@@ -2,6 +2,8 @@
 //!  Part 2 of Modern JavaScript
 //! =========================================
 
+
+// kskdjsadjlskjaklsdjs 
 //? what we will learn in this.
 // i. Object Properties
 // ii. Destructuring: (a) Destructuring Arrays & (b) Destructuring Objects:
