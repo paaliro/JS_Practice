@@ -9,7 +9,7 @@
 <!--*  Phases of Event Propagation: 
 <!--* ===================================
 <!-- 
-? Capturing Phase:
+? ii. Capturing Phase:
 The event starts from the root of the DOM and goes down to the target element.
 Handlers registered for the capturing phase are executed.
 
@@ -17,7 +17,7 @@ Handlers registered for the capturing phase are executed.
 The event reaches the target element.
 The handler registered for the target phase is executed.
 
-? Bubbling Phase:
+? i. Bubbling Phase:
 The event starts from the target element and bubbles up to the root of the DOM.
 Handlers registered for the bubbling phase are executed. -->
 
@@ -126,9 +126,15 @@ Handlers registered for the bubbling phase are executed. -->
           event.stopPropagation();
         }
         // bydefault is the "bubbling phase".
-        document.getElementById("outer").addEventListener("click", callOuter);
-        document.getElementById("middle").addEventListener("click", callMiddle);
-        document.getElementById("inner").addEventListener("click", callinner);
+        // document.getElementById("outer").addEventListener("click", callOuter);
+        // document.getElementById("middle").addEventListener("click", callMiddle);
+        // document.getElementById("inner").addEventListener("click", callinner);
+
+
+        // Adding "Capturing Phase".
+        document.getElementById("outer").addEventListener("click", callOuter, true);
+        document.getElementById("middle").addEventListener("click", callMiddle, true);
+        document.getElementById("inner").addEventListener("click", callinner, true);
     </script>
   </body>
 </html>
