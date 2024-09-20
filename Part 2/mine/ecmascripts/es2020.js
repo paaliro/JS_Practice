@@ -21,12 +21,12 @@
 // console.log(anotherLargeNumber);
 // console.log(typeof anotherLargeNumber);
 
-let maxNumber = Number.MAX_SAFE_INTEGER;
-maxNumber = BigInt(maxNumber);
+// let maxNumber = Number.MAX_SAFE_INTEGER;
+// maxNumber = BigInt(maxNumber);
 // console.log(maxNumber); // Output: 9007199254740991 if increase a single number more then this value then it will not work properly.
 
-let num = maxNumber + 11n;
-console.log(num);
+// let num = maxNumber + 11n;
+// console.log(num);
 
 
 //* ===================================
@@ -44,19 +44,42 @@ console.log(num);
 // const person = {
 //   name: "John",
 //   address: {
-//     city: 0,
+//     city: "New York",
 //     zipCode: 12345,
 //   },
 // };
 
 //? Accessing nested properties without optional chaining
+// const city = person.address;
+// const city = person.address ? person.address.city : "City isn't mention.";
+// console.log(city);
 
 //? with optional chaining
+// const city = person.address ?.city ?? "City isn't mention.";
+// console.log(city);
+
 
 //? One more example
 // The optional chaining operator can be chained multiple times to access deeply nested properties:
+
+const person = {
+    name: "John",
+    address: {
+      city: "New York",
+      zipCode: 12345,
+      coordinates: {
+        latitude: 40.132,
+        longitude: 32.2123,
+      }
+    },
+  };
+
+  const latitude = person.address?.coordinates?.latitude ?? "Not Present."
+  console.log(latitude);
+  
 
 //* ===================================
 //* iv. Promise.allSettled()
 //* ===================================
 //? We will cover later in our Promises section part of the video and you gonna love that part.
+ 
