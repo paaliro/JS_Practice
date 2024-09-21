@@ -1,6 +1,6 @@
-<!--* =================================== 
+<!--* ========================
 <!--*  Event Delegation: 
-<!--* ===================================
+<!--* ========================
 <!--? Event delegation is a concept in JavaScript where instead of attaching event listeners to individual elements, you attach a single event listener to a common ancestor of those elements. This is particularly useful when you have a large number of similar elements and want to reduce the number of event listeners, improve performance, and simplify code. -->
 
 <!--* Example: List with Delegation -->
@@ -12,7 +12,6 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Event Delegation Example</title>
-        <link rel="stylesheet" href="style.css" />
         <style>
           body {
             height: 100vh;
@@ -21,6 +20,8 @@
             justify-content: center;
             align-items: center;
             font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
           }
     
           #myList {
@@ -59,8 +60,14 @@
           <li>🎁 HTML/CSS 🎁</li>
         </ul>
         <p id="listValue"></p>
-    
-        <script></script>
+        <script>
+          const getListDetails = (event) => {
+            const listItem = event.target;
+            document.getElementById("listValue").innerText = `Your favourite programming language is: ${listItem.innerText}`;
+          };
+
+          document.getElementById("myList").addEventListener("click", getListDetails)
+        </script>
       </body>
     </html>
     
